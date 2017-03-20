@@ -22,7 +22,6 @@ namespace Procredito.Api1
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = "Cookies",
-                
             });
 
             AntiForgeryConfig.UniqueClaimTypeIdentifier = Constants.ClaimTypes.Subject;
@@ -32,9 +31,10 @@ namespace Procredito.Api1
             {
                 Authority = "http://localhost:5000",
                 ClientId = "mvc",
-                Scope = "openid profile roles",
+                Scope = "openid profile roles Api2",
+                
                 RedirectUri = "http://localhost:5002/",
-                ResponseType = "id_token",
+                ResponseType = "id_token token",
                 
                 SignInAsAuthenticationType = "Cookies",
 
@@ -64,6 +64,8 @@ namespace Procredito.Api1
                         nid.AddClaim(sub);
                         nid.AddClaims(roles);
                         nid.AddClaim(new Claim("id_token", n.ProtocolMessage.IdToken));
+                        nid.AddClaim(new Claim("access_token", n.ProtocolMessage.AccessToken));
+
 
                         // add some other app specific claim
                         nid.AddClaim(new Claim("app_specific", "some data"));
@@ -73,7 +75,7 @@ namespace Procredito.Api1
                             n.AuthenticationTicket.Properties);
 
                         return Task.FromResult(0);
-                    }
+                    },
 
                     RedirectToIdentityProvider = n =>
                     {

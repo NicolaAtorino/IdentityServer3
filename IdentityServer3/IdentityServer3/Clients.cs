@@ -19,7 +19,7 @@ namespace Procredito.IdentityServer3
                     ClientName = "Silicon-only Client",
                     ClientId = "silicon",
                     Enabled = true,
-                    AccessTokenType = AccessTokenType.Reference,
+                    AccessTokenType = AccessTokenType.Jwt,
 
                     Flow = Flows.ClientCredentials,
 
@@ -30,7 +30,7 @@ namespace Procredito.IdentityServer3
 
                     AllowedScopes = new List<string>
                     {
-                        "Api1"
+                        "Api2"
                     }
                 },
                  // human is involved
@@ -50,7 +50,7 @@ namespace Procredito.IdentityServer3
 
                     AllowedScopes = new List<string>
                     {
-                        "Api1"
+                        "Api2"
                     }
                 },
                 //mvc client
@@ -60,7 +60,7 @@ namespace Procredito.IdentityServer3
                     ClientName = "MVC Client",
                     ClientId = "mvc",
                     Flow = Flows.Implicit,
-                    
+
                     RedirectUris = new List<string>
                     {
                         "http://localhost:5002/"
@@ -72,6 +72,22 @@ namespace Procredito.IdentityServer3
                     },
 
                     AllowAccessToAllScopes = true
+                },
+                new Client
+                {
+                    Enabled = true,
+                    ClientName = "MVC Client (service communication)",
+                    ClientId = "mvc_service",
+                    Flow = Flows.ClientCredentials,
+                    AccessTokenType = AccessTokenType.Jwt,
+                    ClientSecrets = new List<Secret>
+                    {
+                        new Secret("secret".Sha256())
+                    },
+                    AllowedScopes =new List<string>
+                    {
+                        "Api2"
+                    }
                 }
             };
         }

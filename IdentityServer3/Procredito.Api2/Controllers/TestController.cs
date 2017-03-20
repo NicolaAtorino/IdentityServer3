@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Web.Http;
 
-namespace Procredito.Api1.Controllers
+namespace Procredito.Api2.Controllers
 {
     [Route("test")]
     public class TestController : ApiController

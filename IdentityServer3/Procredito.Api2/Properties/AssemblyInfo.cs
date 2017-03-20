@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Le informazioni generali relative a un assembly sono controllate dal seguente 
 // set di attributi. Modificare i valori di questi attributi per modificare le informazioni
 // associate a un assembly.
-[assembly: AssemblyTitle("Procredito.Api1")]
+[assembly: AssemblyTitle("Procredito.Api2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Procredito.Api1")]
+[assembly: AssemblyProduct("Procredito.Api2")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Se il progetto viene esposto a COM, il GUID seguente verrà utilizzato per creare l'ID della libreria dei tipi
-[assembly: Guid("5836939c-5a0a-47e1-9159-2e542890511d")]
+[assembly: Guid("285a5233-586a-477b-b958-5337b9b42197")]
 
 // Le informazioni sulla versione di un assembly sono costituite dai quattro valori seguenti:
 //

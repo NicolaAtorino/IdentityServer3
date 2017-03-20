@@ -5,11 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Procredito.IdentityServer3", "IdentityServer3\Procredito.IdentityServer3.csproj", "{C22F1F3C-2C39-41BB-A732-2CBD88BFB840}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Procredito.Api1", "Procredito.Api1\Procredito.Api1.csproj", "{5836939C-5A0A-47E1-9159-2E542890511D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Procredito.Client1", "Procredito.Client1\Procredito.Client1.csproj", "{CE3EE65E-7B03-4E38-A577-A305E9E8E917}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Procredito.MvcClient1", "Procredito.MvcClient1\Procredito.MvcClient1.csproj", "{0E20EBAA-1198-4AC4-A6D4-4C9747FCD443}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Procredito.Api2", "Procredito.Api2\Procredito.Api2.csproj", "{285A5233-586A-477B-B958-5337B9B42197}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{C22F1F3C-2C39-41BB-A732-2CBD88BFB840}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C22F1F3C-2C39-41BB-A732-2CBD88BFB840}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C22F1F3C-2C39-41BB-A732-2CBD88BFB840}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5836939C-5A0A-47E1-9159-2E542890511D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5836939C-5A0A-47E1-9159-2E542890511D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5836939C-5A0A-47E1-9159-2E542890511D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5836939C-5A0A-47E1-9159-2E542890511D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CE3EE65E-7B03-4E38-A577-A305E9E8E917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CE3EE65E-7B03-4E38-A577-A305E9E8E917}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE3EE65E-7B03-4E38-A577-A305E9E8E917}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{0E20EBAA-1198-4AC4-A6D4-4C9747FCD443}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E20EBAA-1198-4AC4-A6D4-4C9747FCD443}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E20EBAA-1198-4AC4-A6D4-4C9747FCD443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{285A5233-586A-477B-B958-5337B9B42197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{285A5233-586A-477B-B958-5337B9B42197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{285A5233-586A-477B-B958-5337B9B42197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{285A5233-586A-477B-B958-5337B9B42197}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

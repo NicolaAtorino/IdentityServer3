@@ -20,7 +20,8 @@ static class Users
                     new Claim(Constants.ClaimTypes.FamilyName, "Smith"),
                     new Claim(Constants.ClaimTypes.Role, "Geek"),
                     new Claim(Constants.ClaimTypes.Role, "Foo")
-                }
+                },
+                
             },
             new InMemoryUser
             {

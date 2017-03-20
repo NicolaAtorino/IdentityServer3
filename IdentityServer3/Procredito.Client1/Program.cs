@@ -24,7 +24,7 @@ namespace Procredito.Client1
                 "silicon",
                 "F621F470-9731-4A25-80EF-67A6F7C5F4B8");
 
-            return client.RequestClientCredentialsAsync("Api1").Result;
+            return client.RequestClientCredentialsAsync("Api2").Result;
         }
 
         static TokenResponse GetUserToken()
@@ -34,7 +34,7 @@ namespace Procredito.Client1
                 "carbon",
                 "21B5F798-BE55-42BC-8AA8-0025B903DC3B");
 
-            return client.RequestResourceOwnerPasswordAsync("bob", "secret", "Api1").Result;
+            return client.RequestResourceOwnerPasswordAsync("bob", "secret", "Api2").Result;
         }
 
         static void CallApi(TokenResponse response)
