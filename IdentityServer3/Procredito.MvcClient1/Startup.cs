@@ -9,6 +9,8 @@ using IdentityServer3.Core;
 using System.Security.Claims;
 using Microsoft.Owin.Security;
 using System.Threading.Tasks;
+using Procredito.MvcClient1;
+using Microsoft.IdentityModel.Protocols;
 
 [assembly: OwinStartup(typeof(Procredito.Api1.Startup))]
 namespace Procredito.Api1
@@ -40,6 +42,7 @@ namespace Procredito.Api1
 
                 Notifications = new OpenIdConnectAuthenticationNotifications
                 {
+
                     SecurityTokenValidated = n =>
                     {
                         var id = n.AuthenticationTicket.Identity;
@@ -60,6 +63,7 @@ namespace Procredito.Api1
                         nid.AddClaim(familyName);
                         nid.AddClaim(sub);
                         nid.AddClaims(roles);
+                        nid.AddClaim(new Claim("id_token", n.ProtocolMessage.IdToken));
 
                         // add some other app specific claim
                         nid.AddClaim(new Claim("app_specific", "some data"));
@@ -70,15 +74,25 @@ namespace Procredito.Api1
 
                         return Task.FromResult(0);
                     }
+
+                    RedirectToIdentityProvider = n =>
+                    {
+                        if (n.ProtocolMessage.RequestType == OpenIdConnectRequestType.LogoutRequest)
+                        {
+                            var idTokenHint = n.OwinContext.Authentication.User.FindFirst("id_token");
+
+                            if (idTokenHint != null)
+                            {
+                                n.ProtocolMessage.IdTokenHint = idTokenHint.Value;
+                            }
+                        }
+
+                        return Task.FromResult(0);
+                    }
                 }
             });
-            //// configure web api
-            //var config = new HttpConfiguration();
-            //config.MapHttpAttributeRoutes();
 
-            //// require authentication for all controllers
-            //config.Filters.Add(new AuthorizeAttribute());
-
+            app.UseResourceAuthorization(new AuthorizationManager());
 
         }
     }

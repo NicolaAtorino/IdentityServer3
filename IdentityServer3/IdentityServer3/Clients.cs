@@ -66,6 +66,11 @@ namespace Procredito.IdentityServer3
                         "http://localhost:5002/"
                     },
 
+                     PostLogoutRedirectUris = new List<string>
+                    {
+                        "http://localhost:5002/"
+                    },
+
                     AllowAccessToAllScopes = true
                 }
             };
